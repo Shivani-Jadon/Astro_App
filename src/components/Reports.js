@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Astrologer() {
+function Reports() {
     return (
         <div>
-            Astrologer
+            
         </div>
     )
 }
 
-export default Astrologer;
+export default Reports;

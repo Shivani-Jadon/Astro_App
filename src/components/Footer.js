@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Astrologer() {
+function Footer() {
     return (
         <div>
-            Astrologer
+            Footer
         </div>
     )
 }
 
-export default Astrologer;
+export default Footer;
