@@ -8,14 +8,8 @@ import AskIcon from '../assets/logo/ask.png';
 import ReportIcon from '../assets/logo/reports.png'
 
 
-const useStyles = makeStyles({
-  root: {
-    width: 500,
-  },
-});
 
 export default function  Footer() {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   return (
@@ -25,7 +19,10 @@ export default function  Footer() {
         setValue(newValue);
       }}
       showLabels
-      className={classes.root}
+      style={{
+        position:"fixed",
+        bottom:0
+      }}
     >
       <BottomNavigationAction label="Home" icon={<HomeIcon />} />
       <BottomNavigationAction label="Talk to Astroler" icon={<ChatIcon />} />
