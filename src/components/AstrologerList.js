@@ -5,28 +5,23 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-function Astrologer() {
+
+
+function Astrologer(props) {
+    const astrologer = props.astrologer;
+
     return (
         <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="Remy Sharp" src={astrologer.image} />
         </ListItemAvatar>
-        <ListItemText
-          primary="Brunch this weekend?"
-          secondary={
-            <React.Fragment>
-              <Typography
-                sx={{ display: 'inline' }}
-                component="span"
-                variant="body2"
-                color="text.primary"
-              >
-                Ali Connors
-              </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
-            </React.Fragment>
-          }
-        />
+        <ListItemText>{astrologer.name} {astrologer.experience}</ListItemText>
+        <ul>
+            <li>{ astrologer.speciality.toString() }</li>
+            <li>{ astrologer.language.toString() }</li>
+            <li>{ astrologer.price}</li>
+            <button>Call now</button>
+        </ul>
       </ListItem>
     )
 }

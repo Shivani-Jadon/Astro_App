@@ -1,24 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionHeader from './SectionHeader';
+import AstrologerService from '../services/astrologer-service';
 
 const msg = "Leading astrologer from India are just a phonecall away";
 
-const details = () => {
-    <li>
-        <div><img>Image</img></div>
-        <div>
-            <span>name</span>
-            <span>rating</span>
-        </div>
-        <div>Expertise</div>
-        <div>
-            <span>Charges</span>
-            <button>Talk now</button>
-        </div>
-    </li>
-}
-
 function TalkSection() {
+    const [astrologers, setAstrologer] = useState([]);
+
+    useEffect(() => {
+        const astrologerObj = new AstrologerService();
+        setAstrologer( astrologerObj.getAstrologers() );
+    })
+
+    const details = () => {
+        astrologers.map(astrologer => {
+        <li>
+            <div><img src={astrologer.image} /></div>
+            <div>
+                <span>{astrologer.name}</span>
+                <span>4.9</span>
+            </div>
+            <div>{astrologer.speciality}</div>
+            <div>
+                <span>{astrolger.charges}</span>
+                <button>Talk now</button>
+            </div>
+        </li>
+         } )
+    }
+
     return (
         <div>
             <SectionHeader heading="Daily Horoscope" msg={msg}/>
