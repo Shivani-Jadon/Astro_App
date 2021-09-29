@@ -13,17 +13,6 @@ function Horoscope() {
         setSunsign(horoscopeObj.getHoroscope());
     }, [])
 
-    const data = () =>{
-        return sunsigns.map(item => (
-            <div key={item.sign}>
-                {console.log(item)}
-                {/* <span><img alt="Horoscope" src={item.image}/> </span> */}
-                <span>{item.sign}</span>
-                <span>{item.date}</span>
-            </div>
-        ))
-
-    }
 
     return (
         <div>

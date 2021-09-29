@@ -38,7 +38,6 @@ function Astrologer() {
     // fetching sorted list from service
     const getSortedList = (event) => {
         let choice = event.target.value;
-        console.log("sort clicked " + choice);
         const service = new AstrologerService();
         
         switch(choice){
@@ -74,7 +73,7 @@ function Astrologer() {
     }
 
 
-    
+
     // searchBar element 
     const searchBar = 
         <div>
@@ -133,7 +132,7 @@ function Astrologer() {
 
             {
                astrologerList.map(astrologer => (
-                <AstrologerList astrologer={astrologer}/>
+                <AstrologerList key={astrologer.name} astrologer={astrologer}/>
                )) 
             }
 

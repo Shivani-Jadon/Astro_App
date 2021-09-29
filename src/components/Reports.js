@@ -8,14 +8,14 @@ function Reports() {
     useEffect(() => {
         const reportObj = new ReportService();
         setReports(reportObj.getReports());
-    })
+    }, [])
 
     const msg = "Astrology reports basically knowna as horoscope report are available";
 
     const offers = () => {
            return  (                  
                     reports.map(report => (
-                        <div>
+                        <div key={report.id}>
                             <img src={report.path} alt="image" />
                             <div>
                                 <span>{report.price}</span> 
