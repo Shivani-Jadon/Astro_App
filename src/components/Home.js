@@ -9,7 +9,7 @@ import Testimonial from './Testimonial'
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div style={{marginTop: 100, marginBottom: 100}}>
                 <BannerOffer />
                 <Horoscope />
                 <TalkSection />

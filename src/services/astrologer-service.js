@@ -2,23 +2,30 @@
 // the same can be used with rest services
 // instead of dummy data real data is used with rest methods
 
+import astrologer1 from "../assets/images/astrologer1.jpg"
+import astrologer2 from "../assets/images/astrologer2.jpg"
+import astrologer3 from "../assets/images/astrologer3.jpg"
+import astrologer4 from "../assets/images/astrologer4.jpg"
+import astrologer5 from "../assets/images/astrologer5.jpg"
+
+
 export default class AstrologerService {
     constructor() {
         this.astrologers = [
             {name: "Dummy Name 1", speciality: ["Vastu","Palmistry","Vedic Astrology","Face reading", "Tarot"],
-             language: ["hindi","english"], charges: 100, experience: 25, image: "../assets/images/astrologer1.jpg"},
+             language: ["hindi","english"], charges: 100, experience: 25, image: astrologer1},
 
             {name: "Dummy Name 2", speciality: ["Vastu","Kundali Dosh","Tarot"],
-             language: ["tamil","english"], charges: 200, experience: 20, image: "../assets/images/astrologer2.jpg"},
+             language: ["tamil","english"], charges: 200, experience: 20, image: astrologer2},
 
             {name: "Dummy Name 3", speciality: ["Palmistry","Numerology","Face reading", "Tarot"],
-             language: ["english"], charges: 250, experience: 30, image: "../assets/images/astrologer3.jpg"},
+             language: ["english"], charges: 250, experience: 30, image: astrologer3},
 
             {name: "Dummy Name 4", speciality: ["Vedic Astrology"],
-             language: ["hindi","marathi"], charges: 150, experience: 15, image: "../assets/images/astrologer4.jpg"},
+             language: ["hindi","marathi"], charges: 150, experience: 15, image: astrologer4},
 
             {name: "Dummy Name 5", speciality: ["Numerology", "FAce Reading"],
-             language: ["english"], charges: 70, experience: 15, image: "../assets/images/astrologer5.jpg"}
+             language: ["english"], charges: 70, experience: 15, image: astrologer5}
         ]
     }
 

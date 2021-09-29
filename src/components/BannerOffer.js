@@ -21,30 +21,33 @@ export default function BannerOffer() {
         const bannerObj = new BannerService();
         setBanner(bannerObj.getBanners());
         setQuotes(bannerObj.getQuotes());
-    })
+    }, [])
 
     const bannerItem = () => {
-        banners.map(banner => {
-            <li>
-                <img src={banner.src} />
-            </li>
-        })
+      return banners.map(banner =>  (
+      <span key={banner.id}>
+        <img src={banner.path} alt="banner" />
+      </span>)
+      )
     }
     
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1}}>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <Item>{quotes.message}</Item>
+          <Item>
+            <div>{quotes.message}</div>
+            <div>- {quotes.writer}</div>
+          </Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>{quotes.writer}</Item>
+          <Item></Item>
         </Grid>
         <Grid item xs={12}>
-          <Item>
-              <ul>
-                  {bannerItem}
-              </ul>
+          <Item style={{display:"flex", overflowX:"auto"}}>
+            {
+              bannerItem
+            }
           </Item>
         </Grid>
       </Grid>

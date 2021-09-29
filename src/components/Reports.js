@@ -10,12 +10,11 @@ function Reports() {
         setReports(reportObj.getReports());
     })
 
-    const msg = "Leading astrologer from India are just a phonecall away";
+    const msg = "Astrology reports basically knowna as horoscope report are available";
 
     const offers = () => {
-            <div>
-                {                   
-                    reports.map(report => {
+           return  (                  
+                    reports.map(report => (
                         <div>
                             <img src={report.path} alt="image" />
                             <div>
@@ -23,15 +22,14 @@ function Reports() {
                                 <button>Buy Now</button>   
                             </div>
                         </div>
-                    })
-                }
-            </div>
+                    ))
+            )
     }
 
     return (
         <div>           
-            <SectionHeader heading="Daily Horoscope" msg={msg}/>
-            <ul>{offers}</ul>
+            <SectionHeader heading="Reports" msg={msg}/>
+            <div>{offers()}</div>
         </div>
     )
 }

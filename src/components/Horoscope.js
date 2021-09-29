@@ -6,29 +6,40 @@ const msg = "Read your daily horoscope based of your sunshine";
 
 
 function Horoscope() {
-    const [sunsign, setSunsign] = useState([]);
+    const [sunsigns, setSunsign] = useState([]);
 
     useEffect(() => {
         const horoscopeObj = new HoroscopeService();
         setSunsign(horoscopeObj.getHoroscope());
-    })
+    }, [])
 
     const data = () =>{
-        sunsign.map(item => {
-            <li>
-                <div><img alt="Horoscope" src={item.image}/> </div>
-                <div>{item.sign}</div>
-                <div>{item.date}</div>
-            </li>
-        })
+        return sunsigns.map(item => (
+            <div key={item.sign}>
+                {console.log(item)}
+                {/* <span><img alt="Horoscope" src={item.image}/> </span> */}
+                <span>{item.sign}</span>
+                <span>{item.date}</span>
+            </div>
+        ))
 
     }
 
     return (
         <div>
             <SectionHeader heading={"Daily Horoscope"} msg={msg} />
-           
-            <ul>{data}</ul>
+            {console.log(sunsigns)}
+            <div>
+                {
+                    sunsigns.map(item => (
+                        <div>
+                            <div><img src={item.img} /></div>
+                            <div>{item.sign}</div>
+                            <div>{item.date}</div>
+                        </div>                           
+                    ))
+                }
+            </div>
         </div>
     )
 }

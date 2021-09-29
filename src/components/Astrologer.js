@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from '@material-ui/core/Link';
 import SearchIcon from '../assets/logo/search.png';
 import FilterIcon from '../assets/logo/filter.png';
@@ -11,6 +11,11 @@ function Astrologer() {
     const [displaySearch, toggleSearch] = useState(true);
     const [keyword, setKeyword] = useState('');
     const [astrologerList, updateList] = useState([]);
+
+    useEffect(() => {
+        const service = new AstrologerService();
+        updateList(service.getAstrologers());
+    }, [])
 
     const handleSearch = () => {
         toggleSearch(!displaySearch);

@@ -10,29 +10,33 @@ function TalkSection() {
     useEffect(() => {
         const astrologerObj = new AstrologerService();
         setAstrologer( astrologerObj.getAstrologers() );
-    })
+        // console.log(astrologers);
+    }, [])
 
     const details = () => {
-        astrologers.map(astrologer => {
-        <li>
+        return astrologers.map(astrologer => (
+        <div>
             <div><img src={astrologer.image} /></div>
             <div>
                 <span>{astrologer.name}</span>
                 <span>4.9</span>
             </div>
-            <div>{astrologer.speciality}</div>
+            <div>{astrologer.speciality[0]}</div>
             <div>
-                <span>{astrolger.charges}</span>
+                <span>{astrologer.charges}</span>
                 <button>Talk now</button>
             </div>
-        </li>
-         } )
+        </div>
+         ) )
     }
 
     return (
         <div>
             <SectionHeader heading="Daily Horoscope" msg={msg}/>
-            <ul>{details}</ul>
+            <div>
+                {console.log(astrologers)}
+                {details()}
+            </div>
         </div>
     )
 }

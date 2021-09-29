@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionHeader from './SectionHeader';
 import ProfileIcon from '@material-ui/icons/AccountCircle';
+import ReviewService from '../services/review-service';
 
 function Testimonial() {
-    const review = 
-    <div>
-        <div>" My review</div>
-        <div><ProfileIcon /></div>
-        <div>
-            <div>Name</div>
-            <div>Location</div>
-        </div>
-    </div>
+    let [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        const service = new ReviewService
+        setReviews(service.getReviews());
+    }, []);
+
+    const reviewData = () => {
+    return (
+            reviews.map(review => (
+                <div>
+                    <div>" {review.content}</div>
+                    <div><ProfileIcon /></div>
+                    <div>
+                        <div>{review.name}</div>
+                        <div>{review.location}</div>
+                    </div>
+                </div>
+            ))
+        )      
+    }
 
     return (
         <div>
-            <SectionHeader heading={"HEar from our happy customers"} seeAll={false} msg={undefined} />
-            <ul>{review}</ul>
+            <SectionHeader heading={"Hear from our happy customers"} seeAll={false} msg={undefined} />
+            <ul>{reviewData()}</ul>
         </div>
     )
 }

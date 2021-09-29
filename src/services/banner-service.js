@@ -1,3 +1,7 @@
+import banner1 from "../assets/images/banner1.jpg";
+import banner2 from "../assets/images/banner2.jpg";
+import banner3 from "../assets/images/banner3.jpg";
+
 export default class BannerService {
     constructor() {
         this.quote = {
@@ -6,21 +10,21 @@ export default class BannerService {
         }; 
 
         this.banners = [
-            { id : 1, path : "../assets/images/banner1.jpg" },
-            { id : 2, path : "../assets/images/banner2.jpg" },
-            { id : 3, path : "../assets/images/banner3.jpg" },
-            { id : 4, path : "../assets/images/banner1.jpg" },
+            { id : 1, path : banner1 },
+            { id : 2, path : banner2 },
+            { id : 3, path : banner3 },
+            { id : 4, path : banner1 },
         ]
     }
 
     // method to fetch banner data
     getBanners() {
-        this.banners;
+        return this.banners;
     } 
 
     // method to fetch quotes
     getQuotes() {
-        this.quote;
+        return this.quote;
     }
 }
 
