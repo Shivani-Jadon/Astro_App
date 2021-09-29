@@ -17,9 +17,9 @@ function Astrologer(props) {
         </ListItemAvatar>
         <ListItemText>{astrologer.name} {astrologer.experience}</ListItemText>
         <ul>
-            <li>{ astrologer.speciality.toString() }</li>
-            <li>{ astrologer.language.toString() }</li>
-            <li>{ astrologer.price}</li>
+            <li><b>Speciality :</b> { astrologer.speciality.toString() }</li>
+            <li><b>Language :</b> { astrologer.language.toString() }</li>
+            <li><b>Charges :</b> { astrologer.charges}/ min</li>
             <button>Call now</button>
         </ul>
       </ListItem>
