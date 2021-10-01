@@ -11,16 +11,16 @@ import LogoIcon from '../assets/logo/logo.png';
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }} height="50px">
-      <AppBar position="fixed">
-        <Toolbar style={{justifyContent:"space-between"}}>
+      <AppBar elevation={0}>
+        <Toolbar className="toolbar">
           <IconButton>
-            <img src={MenuIcon}></img>
+            <img src={MenuIcon} className="menu"></img>
           </IconButton>
           <IconButton>
-              <img src={LogoIcon} height='35px'></img>
+              <img src={LogoIcon} className="main-logo"></img>
           </IconButton>
           <IconButton>
-              <img src={ProfileIcon} height='28px'></img>
+              <img src={ProfileIcon} className="menu"></img>
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -1,0 +1,26 @@
+$icon-size : 2.0rem;
+
+.footer{
+    position: fixed;
+    bottom:0;
+    padding: $s-size 0;
+
+    .bottom-navigation {
+        align-items: flex-start;
+
+        .MuiSvgIcon-root {
+            font-size: $icon-size;
+        }
+        .MuiBottomNavigationAction-root {
+            color: $light-grey;
+        }
+        
+        .Mui-selected {
+            color: $theme-color;
+        }
+
+        .menu-icon {
+            width: $icon-size;
+        }
+    }
+}

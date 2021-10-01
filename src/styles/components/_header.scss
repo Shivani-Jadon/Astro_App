@@ -1,0 +1,20 @@
+@use './base/colors';
+
+$icon-size-main : 2.8rem;
+$icon-size-sc : $icon-size-main / 1.8;
+
+.MuiAppBar-colorPrimary{
+    background-color: $white-theme !important;
+}
+
+.toolbar {
+    justify-content: space-between;
+    padding: 0 !important;
+
+    .main-logo {
+        height: $icon-size-main;
+    }
+    .menu {
+        height: $icon-size-sc;
+    }
+}
