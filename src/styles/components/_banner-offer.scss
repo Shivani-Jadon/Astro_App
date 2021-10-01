@@ -1,0 +1,52 @@
+$image-height : 10.8rem;
+
+.quotation {
+    padding-left: $m-size;
+    .quote-mark {
+        color: $primary-grey;
+        font-size: $font-size-small;
+    }
+    .quote-mark::before{
+        content: '\201D''\201D';
+        color: $blue-shade;
+        font-weight: bolder;
+        font-size: x-large;
+        line-height: $font-size-small;
+    }
+    .quote-mark::after{
+        content: '\201E''\201E';
+        color: $blue-shade;
+        font-weight: bolder;
+        font-size: x-large;
+        line-height: $font-size-small;
+    }
+    .writer {
+        text-align: center;
+        padding: $s-size;
+        font-style: italic;
+        color: $light-grey;
+        font-size: $font-size-small;
+    }
+}
+
+.ganesh {
+    height: $xl-size;
+    padding-right: $m-size;
+    img {
+        height: inherit;
+    }
+}
+
+.banner-image-container {
+    display: inline-flex;
+    overflow-x: auto;
+    .banner-image {
+        height: $image-height;
+        margin: $s-size;
+        img{
+            height: inherit;
+            box-shadow: 1px 1px 7px;
+            border-radius: $font-size-small;
+        }
+    }
+}

@@ -16,9 +16,6 @@ import libra from "../assets/images/horoscope/libra.jpg"
 export default class HoroscopeService {
     constructor() {
         this.horoscopes = [
-            {   sign : "Aries", date: "March 21 - April 19", img: aries,
-                content : "Your horoscope states that you will be having a great day today"
-            },
             {   sign : "Tarus", date: "April 20 - May 20", img: tarus,
                 content : "Your horoscope states that you will be having a great day today"
             },
@@ -52,6 +49,9 @@ export default class HoroscopeService {
             {   sign : "Libra", date: "Febraury 21 - March 19", img: libra,
                 content : "Your horoscope states that you will be having a great day today"
             },
+            {   sign : "Aries", date: "March 21 - April 19", img: aries,
+                content : "Your horoscope states that you will be having a great day today"
+            }
         ]
     }
 

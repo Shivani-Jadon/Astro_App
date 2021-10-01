@@ -18,13 +18,13 @@ function Horoscope() {
         <div>
             <SectionHeader heading={"Daily Horoscope"} msg={msg} />
             {console.log(sunsigns)}
-            <div>
+            <div className="horoscope-container">
                 {
                     sunsigns.map(item => (
-                        <div>
-                            <div><img src={item.img} /></div>
-                            <div>{item.sign}</div>
-                            <div>{item.date}</div>
+                        <div className="horoscope-content">
+                            <div className="image-container"><img src={item.img} /></div>
+                            <div className="sign">{item.sign}</div>
+                            <div className="date">{item.date}</div>
                         </div>                           
                     ))
                 }

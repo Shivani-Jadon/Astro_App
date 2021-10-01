@@ -1,0 +1,20 @@
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+
+    .heading {
+        color: $primary-black;
+        font-weight: bold;
+    }
+
+    .forward {
+        font-weight: bold;
+        color: $theme-color;
+    }
+}
+
+.content {
+    color: $primary-grey;
+    font-size: $font-size-small;
+}

@@ -1,0 +1,33 @@
+$astrologer-item : 10rem;
+
+.astrologer-container {
+    display: flex;
+    overflow-x: auto;
+    padding: $m-size 0;
+    .astrologer-content{
+        margin-right : $s-size;
+        min-width: $astrologer-item;
+        box-shadow: 0px 0px 7px $light-grey;
+        padding: $s-size;
+        border-radius: $s-size;
+        .astrologer-img {
+            margin: auto;
+            height: $astrologer-item * 0.75;
+            width: $astrologer-item * 0.75;
+            img {
+                height: inherit;
+                width: inherit;
+            }
+        }
+        .info-1 {
+
+        }
+        .info-2 {
+
+        }
+        .info-3 {
+            
+        }
+    }
+    
+}

@@ -1,0 +1,28 @@
+$horocope-icons : 4.7rem;
+$horoscope-date : $horocope-icons * 1.25;
+
+.horoscope-container {
+    display: flex;
+    overflow-x: auto;
+    .horoscope-content {
+        min-width: $horoscope-date;
+        text-align: center;
+        padding: $s-size;
+        .image-container {
+            height: $horocope-icons;
+            img {
+                height: inherit;
+            }
+        }
+        .sign {
+            color: $primary-black;
+            font-weight: bold;
+            padding: $s-size 0;
+            font-size: $font-size-small;
+        }
+        .date {
+            color: $light-grey;
+            font-size: $font-size-small * 0.7;
+        }
+    }
+}
