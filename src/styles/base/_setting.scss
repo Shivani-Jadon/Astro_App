@@ -5,3 +5,10 @@ body{
     margin-top: $m-size;
     margin-bottom: $xl-size;
 }
+.btn {
+    background-color: $theme-color;
+    color : $white-theme;
+    border : 0;
+    border-radius: 0.2rem;
+    padding: $s-size/2 $s-size;
+}

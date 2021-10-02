@@ -1,0 +1,47 @@
+$paper-width : 12rem;
+$paper-height : 12rem;
+.review-container {
+    display: flex;
+    overflow-x: auto;
+    .review {
+        position: relative;
+        min-width: $paper-width;
+        height: $paper-height;
+        margin: $s-size;
+        // padding: $xs-size;
+        text-align: center;
+        .review-msg {
+            height: $paper-height*0.5;
+            padding-top: $s-size;
+            font-size: $font-size-small;
+            color: $primary-grey;
+        }
+        .review-msg::before {
+            content: '\201D';
+            font-size: $font-size-large;
+            color: $blue-shade;
+        }
+        .profile-icon {
+            position: absolute;
+            bottom: 3.2rem;
+            right: 4.6rem;
+            .icon {
+                color: $theme-color;
+                font-size: $font-size-small * 3;
+            }
+        }
+        .reviewer {
+            background-color: $light-blue;
+            .reviewer-name {
+                padding-top: $m-size;
+                font-size: $font-size-small;
+                color: $primary-black;
+            }
+            .reviewer-location{
+                padding: $s-size 0;
+                font-size: $font-size-small *0.75;
+                color: $light-grey;
+            }
+        }
+    }
+}

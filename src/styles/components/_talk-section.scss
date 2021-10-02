@@ -20,13 +20,28 @@ $astrologer-item : 10rem;
             }
         }
         .info-1 {
-
+            display: flex;
+            justify-content: space-between;
+            margin: 0.8rem auto;
+            color: $primary-black;
+            font-size: $font-size-small;
+            font-weight: bold;
+            .rating {
+                color: $theme-color;
+            }
         }
         .info-2 {
-
+            font-size: $font-size-small;
+            color: $light-grey;
+            margin: $xs-size auto;
         }
         .info-3 {
-            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: $xs-size auto;
+            color: $primary-black;
+            font-size: $font-size-small*0.8;
         }
     }
     

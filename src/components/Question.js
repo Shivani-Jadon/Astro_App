@@ -17,14 +17,16 @@ function Question() {
 
     const questionForm = 
         <div>
-            <h3>Choose a category</h3>
+            <div className="label">Choose a category</div>
             <TextField
                 id="outlined-select-currency"
                 select
-                label="Select a category"
+                label=""
                 value={category}
                 onChange={handleChange}
                 fullWidth={true}
+                className="selector"
+                placeholder="Select from the category"
                 >
                 {categories.map((option) => (
                     <MenuItem key={option} value={option}>
@@ -33,15 +35,16 @@ function Question() {
                 ))}
             </TextField>
             
-            <Grid container spacing={2}>
-                <Grid item md={5}>
-                    <span>$99 including GST</span>
+            <Grid container spacing={1} className="info-grid">
+                <Grid item xs={4}>
+                    <span>&#8377; 99 </span>
+                    <span className="gst">(including GST)</span>
                 </Grid>
-                <Grid item md={3}>
+                <Grid item xs={4} className="ideas">
                     <span>Ideas what to ask</span>
                 </Grid>
-                <Grid item md={3}>
-                    <button>Ask a question</button>
+                <Grid item xs={4}>
+                    <button className="btn">Ask a question</button>
                 </Grid>
             </Grid>
         </div>
@@ -49,7 +52,7 @@ function Question() {
     return (
         <div>           
             <SectionHeader heading="Ask a question" msg={msg}/>
-            <div>{questionForm}</div>
+            <div className="form-container">{questionForm}</div>
         </div>
     )
 }

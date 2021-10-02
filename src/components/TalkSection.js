@@ -19,12 +19,12 @@ function TalkSection() {
             <div className="astrologer-img"><img src={astrologer.image} /></div>
             <div className="info-1">
                 <span>{astrologer.name}</span>
-                <span>4.9</span>
+                <span className="rating">4.9</span>
             </div>
             <div className="info-2">{astrologer.speciality[0]}</div>
             <div className="info-3">
-                <span>{astrologer.charges}</span>
-                <button>Talk now</button>
+                <span>&#8377; {astrologer.charges}/<br/>min</span>
+                <button className="btn">Talk now</button>
             </div>
         </div>
          ) )

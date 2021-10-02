@@ -1,0 +1,31 @@
+$offer-size : 11.8rem;
+$offer-width : 18rem;
+.report-container {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    .offers {
+        height: $offer-size;
+        width: $offer-width;
+        border-radius: $xs-size;
+        padding: $xs-size;
+        img {
+            height: inherit;
+            width: inherit;
+            border-radius: $xs-size;
+        }
+        .offer-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: $xs-size;
+            box-sizing: border-box;
+            padding: $s-size;
+            background-color: #0000006b;
+            color: $white-theme;
+            font-size: $font-size-small;
+            width: $offer-width;
+        }
+    }
+}

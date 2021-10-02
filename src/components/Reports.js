@@ -15,11 +15,11 @@ function Reports() {
     const offers = () => {
            return  (                  
                     reports.map(report => (
-                        <div key={report.id}>
+                        <div key={report.id} className="offers">
                             <img src={report.path} alt="image" />
-                            <div>
-                                <span>{report.price}</span> 
-                                <button>Buy Now</button>   
+                            <div className="offer-label">
+                                <span>&#8377; {report.price}/min</span> 
+                                <button className="btn">Buy Now</button>   
                             </div>
                         </div>
                     ))
@@ -29,7 +29,7 @@ function Reports() {
     return (
         <div>           
             <SectionHeader heading="Reports" msg={msg}/>
-            <div>{offers()}</div>
+            <div className="report-container">{offers()}</div>
         </div>
     )
 }
