@@ -3,7 +3,8 @@
 Front end of astrology assignment built using React.js, Material ui/icons and scss for styling.
 Images and logos have been taken from internet acting as dummy data.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Dummy data has been used in the Services (Replacable with rest APIs)
+
+Dummy data has been used in the Services (Replacable with data from rest APIs)
 
 ## Features
 - Mobile view with attractive UI
@@ -12,16 +13,15 @@ Dummy data has been used in the Services (Replacable with rest APIs)
     - Bottom navigation to switch between home and astrologer screen
 - The data on the home screen is rendered from service methods
 - On the Astrologer screen the user can view list of astrologers along with information
-- Astrologer data can be filtered based on langauge
-- Astrologer data can be sorted in the increasing/decreasing order of price and experience
-- Astrologer can be searched based on name, speciality and language
+    - Astrologer data can be filtered based on langauge
+    - Astrologer data can be sorted in the increasing/decreasing order of price and experience
+    - Astrologer can be searched based on name, speciality and language
 
-Dummy data has been directly used in the services
+Service methods are working on dummy data
 
 ## Preview
-### Home Screen and Astrologer Screen
-<img src="src/assets/preview/HomeScreen.png" width="400px" height="450px"></img> <img src="src/assets/preview/Astrologer
-    Screen.png" width="400px" height="450px"></img>
+#### Home Screen and Astrologer Screen
+<img src="src/assets/preview/HomeScreen.png" width="300px" height="550px"></img> &nbsp;&emsp; <img src="src/assets/preview/AstrologerScreen.png" width="300px" height="550px"></img>
 
 ## How To Install.
 
@@ -30,7 +30,7 @@ Dummy data has been directly used in the services
 2. Start by installing npm if you don't have it already.
 3. Navigate to Project Directory by :
 ```
-cd codial
+cd Astro_Assignment
 ```
 4. run following commands :
 ```
