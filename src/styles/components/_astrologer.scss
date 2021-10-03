@@ -10,12 +10,11 @@
         justify-content: space-between;
         align-items: center;
         .heading {
-            font-size: $font-size-small;
             font-weight: bold;
         }
         .option-link {
             img {
-                height: $font-size-small;
+                height: $font-size-small*1.5;
                 padding-right: $xs-size;
             }
         }
