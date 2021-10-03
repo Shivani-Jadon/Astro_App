@@ -20,7 +20,8 @@ Dummy data has been directly used in the services
 
 ## Preview
 ### Home Screen and Astrologer Screen
-<img src="src/assets/preview/HomeScreen.png" width="400px" height="450px"></img> <img src="src/assets/preview/Astrologer.png" width="400px" height="450px"></img>
+<img src="src/assets/preview/HomeScreen.png" width="400px" height="450px"></img> <img src="src/assets/preview/Astrologer
+    Screen.png" width="400px" height="450px"></img>
 
 ## How To Install.
 
