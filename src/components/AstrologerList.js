@@ -1,9 +1,6 @@
 import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
+import { PhoneOutlined } from '@material-ui/icons';
 
 
 
@@ -11,18 +8,25 @@ function Astrologer(props) {
     const astrologer = props.astrologer;
 
     return (
-        <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src={astrologer.image} />
-        </ListItemAvatar>
-        <ListItemText>{astrologer.name} {astrologer.experience}</ListItemText>
-        <ul>
-            <li><b>Speciality :</b> { astrologer.speciality.toString() }</li>
-            <li><b>Language :</b> { astrologer.language.toString() }</li>
-            <li><b>Charges :</b> { astrologer.charges}/ min</li>
-            <button>Call now</button>
-        </ul>
-      </ListItem>
+      <Grid container spacing={2}>
+        <Grid item xs={3} >
+          <div className="astrologer-image">
+            <img src={astrologer.image} />
+          </div>
+        </Grid>
+        <Grid item xs={6} >
+          <div className="name-astrologer">{astrologer.name}</div>
+          <ul className="astrologer-info-list">
+            <li><span>Speciality :</span> { astrologer.speciality.toString() }</li>
+            <li><span>Language :</span> { astrologer.language.toString() }</li>
+            <li><span>Charges :</span> { astrologer.charges}/ min</li>
+            <button className="btn"><PhoneOutlined className="phone-icon"/>  Call now</button>
+          </ul>
+        </Grid>
+        <Grid item xs={3} >
+          <div className="experience">{astrologer.experience} Years</div>
+        </Grid>
+      </Grid>
     )
 }
 

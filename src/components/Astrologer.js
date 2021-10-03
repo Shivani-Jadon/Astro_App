@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Link from '@material-ui/core/Link';
-import SearchIcon from '../assets/logo/search.png';
-import FilterIcon from '../assets/logo/filter.png';
-import SortIcon from '../assets/logo/sort.png';
+import SearchImage from '../assets/logo/search.png';
+import FilterImage from '../assets/logo/filter.png';
+import SortImage from '../assets/logo/sort.png';
 import AstrologerList from './AstrologerList';
 import AstrologerService from '../services/astrologer-service';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
+import { Divider, FormControl, FormControlLabel, FormLabel, IconButton, InputBase, Paper, Radio, RadioGroup } from '@material-ui/core';
+import { CloseOutlined, SearchOutlined } from '@material-ui/icons';
 
 // The component 
 function Astrologer() {
@@ -76,16 +77,26 @@ function Astrologer() {
 
     // searchBar element 
     const searchBar = 
-        <div>
-            <input type="text" placeholder="Search" value={keyword} onChange={changeInput}></input>
-            <button onClick={searchList}>Search</button>
-            <button onClick={handleSearch}>x</button>
-        </div>
-
+    <Paper className="search-widget">
+      <IconButton className="search-btn" type="button" aria-label="search" onClick={searchList}>
+        <SearchOutlined />
+      </IconButton>
+      <InputBase
+        className="search-input"
+        placeholder="Search Astrologer"
+        value={keyword}
+        onChange={changeInput}
+      />
+      <IconButton className="search-btn" color="primary" aria-label="directions" onClick={handleSearch}>
+        <CloseOutlined />
+      </IconButton>
+    </Paper>
+      
     // sort menu
     const sortElement = 
-    <FormControl component="fieldset" onClick={() => getFilteredList}>
-        <FormLabel component="legend">Sort</FormLabel>
+    <FormControl component="fieldset" onClick={() => getFilteredList} className="widget">
+        <div className="widget-title">Sort</div>
+        <Divider />
         <RadioGroup
         aria-label="sort"
         name="radio-buttons-group"
@@ -99,8 +110,10 @@ function Astrologer() {
 
 
     // filter menu
-    const filterElement = <FormControl component="fieldset" onClick={() => getFilteredList}>
-        <FormLabel component="legend">Language Filter</FormLabel>
+    const filterElement = <FormControl component="fieldset" className="language-filter widget"
+     onClick={() => getFilteredList}>
+        <div className="widget-title">Language Filter</div>
+        <Divider />
         <RadioGroup
         aria-label="language filter"
         name="radio-buttons-group"
@@ -114,17 +127,18 @@ function Astrologer() {
 
 
 
-
     return (
-        <div style={{marginTop: 20, marginBottom: 70}}>
-            <span>
-                Talk to an astrologer
-            </span>
-
-            <Link onClick={handleSearch}><img src={SearchIcon} height="24px" /></Link>
-            <Link onClick={handleFilter}><img src={FilterIcon} height="24px" /></Link>
-            <Link onClick={handleSort}><img src={SortIcon} height="24px" /></Link>
-
+        <div className="astrologers-container">
+            <div className="section-title">
+                <div className="heading">
+                    Talk to an astrologer
+                </div>
+                <div className="option-link">
+                    <Link onClick={handleSearch}><img src={SearchImage} /></Link>
+                    <Link onClick={handleFilter}><img src={FilterImage} /></Link>
+                    <Link onClick={handleSort}><img src={SortImage} /></Link>
+                </div>
+            </div>
             {displaySearch && searchBar}
             {displaySort && sortElement}
             {displayFilter && filterElement}
@@ -132,7 +146,10 @@ function Astrologer() {
 
             {
                astrologerList.map(astrologer => (
+                <div className="list-item-container">
                 <AstrologerList key={astrologer.name} astrologer={astrologer}/>
+                <Divider />
+                </div>
                )) 
             }
 

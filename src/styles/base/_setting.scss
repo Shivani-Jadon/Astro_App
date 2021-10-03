@@ -11,4 +11,6 @@ body{
     border : 0;
     border-radius: 0.2rem;
     padding: $s-size/2 $s-size;
+    display: flex;
+    align-items: center;
 }

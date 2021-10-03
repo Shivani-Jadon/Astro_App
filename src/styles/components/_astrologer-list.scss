@@ -1,0 +1,35 @@
+.astrologer-image {
+    width: 100%;
+    img {
+        width: inherit;
+    }
+}
+.name-astrologer {
+    font-size: $font-size-small;
+    font-weight: bold;
+}
+.astrologer-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: $font-size-small;
+    li{
+        color: $primary-grey;
+        span{
+            color: $theme-color;
+        }
+    }
+    button {
+        margin: $s-size;
+    }
+    .phone-icon {
+        height: $font-size-small;
+        padding-right: $s-size;
+    }
+}
+.experience {
+    font-size: $font-size-small;
+    padding: $xs-size 0;
+    color: $primary-grey;
+    text-align: end;
+}

@@ -1,0 +1,59 @@
+.MuiFormGroup-root {
+    color: $primary-grey;
+}
+
+.astrologers-container {
+    margin-top: $m-size;
+    margin-bottom: $xl-size;
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .heading {
+            font-size: $font-size-small;
+            font-weight: bold;
+        }
+        .option-link {
+            img {
+                height: $font-size-small;
+                padding-right: $xs-size;
+            }
+        }
+    }
+    .widget {
+        position: absolute;
+        background: $white-theme;
+        right: $xs-size;
+        padding: $s-size;
+        box-shadow: 1px 1px 10px $light-grey;
+        .widget-title {
+            margin-bottom: $xs-size;
+            color: $theme-color;
+        }
+        span {
+            font-size: $font-size-small !important;
+        }
+    }
+    .language-filter {
+        font-size: $font-size-small !important;
+    }
+    .list-item-container {
+        margin: $s-size 0;
+    }
+    .search-widget {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        .search-input {
+            width: 75vw;
+        }
+        .search-btn {
+            color: $theme-color;
+            padding: $xs-size;
+        }
+        div {
+            font-size: $font-size-small !important;
+        }
+    }
+}
