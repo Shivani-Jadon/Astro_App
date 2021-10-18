@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Dummy data has been used in the Services (Replacable with data from rest APIs)
 
+<b>Reference to API</b> -> [AstroAPI](https://github.com/Shivani-Jadon/AstroAPI)
+
 ## Features
 - Mobile view with attractive UI
 - Home screen and astrologer screen
