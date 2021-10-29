@@ -1,6 +1,6 @@
-# Astrology Assignment
+# Astrology App
 
-Front end of astrology assignment built using React.js, Material ui/icons and scss for styling.
+Front end of astrology app built using React.js, Material ui/icons and scss for styling.
 Images and logos have been taken from internet acting as dummy data.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -32,7 +32,7 @@ Service methods are working on dummy data
 2. Start by installing npm if you don't have it already.
 3. Navigate to Project Directory by :
 ```
-cd Astro_Assignment
+cd Astro_App
 ```
 4. run following commands :
 ```
